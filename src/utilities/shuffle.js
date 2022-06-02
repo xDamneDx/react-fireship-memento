@@ -8,9 +8,19 @@ const shuffle = () => {
     { image: "/assets/node.png" },
     { image: "/assets/react.png" },
     { image: "/assets/ts.png" },
+    { image: "/assets/dart.png" },
+    { image: "/assets/firebase.png" },
+    { image: "/assets/flutter.png" },
+    { image: "/assets/go.png" },
+    { image: "/assets/jsx.png" },
+    { image: "/assets/rust.png" },
+    { image: "/assets/sql.png" },
+    { image: "/assets/stack.png" },
   ];
 
-  return [...assets, ...assets]
+  const randomEight = assets.sort(() => Math.random() - 0.5).slice(0, 8);
+
+  return [...randomEight, ...randomEight]
     .sort(() => Math.random() - 0.5)
     .map((card) => ({ ...card, id: Math.random() }));
 };
